@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.SearchNewsFragment">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:id="@+id/linearSearch"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_5sdp">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="1"
+            android:id="@+id/searchBox"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:background="@drawable/searc_box"
+            android:hint="Search Meals..."
+            android:textSize="@dimen/_20sdp">
+        </EditText>
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/searchRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearSearch"
+        android:layout_margin="@dimen/_4sdp">
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="not found"
+        app:layout_constraintBottom_toBottomOf="@+id/searchRec"
+        app:layout_constraintStart_toStartOf="@+id/searchRec"
+        app:layout_constraintEnd_toEndOf="@+id/searchRec"
+        android:layout_margin="@dimen/_150sdp"
+        android:id="@+id/errorMassage">
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
